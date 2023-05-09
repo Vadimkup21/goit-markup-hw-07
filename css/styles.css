@@ -452,6 +452,11 @@ img {
     padding-bottom: 120px;
   }
 }
+.second-list{
+  display: flex;
+    flex-direction: column;
+    gap: 72px;
+}
 @media screen and (min-width: 768px) {
   .second-list {
     flex-direction: row;
@@ -466,17 +471,40 @@ img {
     gap: 24px;
   }
 }
-.second-item {
+@media screen and (min-width:768px) {
+  .second-item{
+    width: calc((100% - 24px) / 2);
+    
+  }
+}
+@media screen and (min-width:1158px) {
+    .second-item {
   width: calc((100% - 3 * 24px) / 4);
 }
+  
+}
+
 
 .title-page {
   margin-bottom: 8px;
+  text-align: center;
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--color-navy-blue);
+}
+@media screen and (min-width:768px) {
+  .title-page{
+text-align: left;
+  }
+}
+@media screen and (min-width:1158px) {
+  .title-page{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+  }
 }
 .portfolio-card {
   margin-bottom: 8px;
@@ -499,7 +527,6 @@ img {
   letter-spacing: 0.02em;
   color: var(--color-slate);
 }
-
 .advantages-logo {
   display: flex;
   align-items: center;
@@ -508,6 +535,12 @@ img {
   background-color: #f4f4fd;
   border-radius: 4px;
   margin-bottom: 8px;
+}
+@media screen and (max-width:1157px) {
+  .advantages-logo{
+    display: none;
+  }
+  
 }
 /* section 3 */
 .section-three {
