@@ -59,8 +59,8 @@ img {
   padding-right: 16px;
   align-items: center;
 
-  outline: 2px solid red;
-  outline-offset: -2px;
+  /* outline: 2px solid red;
+  outline-offset: -2px; */
 }
 /* Tablet */
 @media screen and (min-width: 768px) {
