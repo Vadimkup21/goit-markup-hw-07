@@ -259,10 +259,7 @@ img {
   stroke: var(--color-navy-blue);
 }
 /* section 1 */
-.first-section {
-  background-color: var(--color-grey);
-  padding: 188px 0;
-}
+
 .title {
   font-weight: 700;
   font-size: 36px;
@@ -609,10 +606,10 @@ img {
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   border-radius: 0px 0px 4px 4px;
 }
-@media screen and (min-width: 768px) {
+/* @media screen and (min-width: 768px) {
   .setion-img {
   }
-}
+} */
 @media screen and (min-width: 1158px) {
   .setion-img {
     width: calc((100% - 72px) / 4);
@@ -695,8 +692,8 @@ img {
 .customers-icon {
   fill: currentColor;
 }
-.customers-container {
-}
+/* .customers-container {
+} */
 @media screen and (min-width: 768px) and (max-width: 1157px) {
   .customers-container {
     width: 552px;
@@ -756,6 +753,7 @@ img {
   color: var(--color-cloud);
 }
 .footer-text {
+  width: 268px;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -859,18 +857,80 @@ img {
 /* DZ4 */
 
 .first-section {
+  background-color: var(--color-grey);
+  padding: 188px 0;
   height: 600px;
   max-width: 1440px;
   margin-right: auto;
   margin-left: auto;
-  background-image: linear-gradient(
-      rgba(46, 47, 66, 0.7),
-      rgba(46, 47, 66, 0.7)
-    ),
-    url("../images/people.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+@media screen and (min-width: 320px) and (max-width: 428px) {
+  .first-section {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url("/goit-markup-hw-07/images/gallery/Dark-bg_mob@1x.webp");
+  }
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .first-section {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(/goit-markup-hw-07/images/gallery/Dark-bg_mob@2x.webp);
+    }
+  }
+}
+
+@media screen and (min-width: 429px) and (max-width: 768px) {
+  .first-section {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(/goit-markup-hw-07/images/gallery/Dark-bg_tab@1x.webp);
+  }
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .first-section {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(/goit-markup-hw-07/images/gallery/Dark-bg_tab@2x.webp);
+    }
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+  .first-section {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(/goit-markup-hw-07/images/gallery/people-office\ 1_desktop@1x.webp);
+  }
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .first-section {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(/goit-markup-hw-07/images/gallery/people-office\ 1_desktop@2x.webp);
+    }
+  }
 }
 /* Overlay */
 .overlay {
@@ -1069,8 +1129,8 @@ img {
   color: var(--color-text-form);
 }
 
-.checkbox-icon {
-}
+/* .checkbox-icon {
+} */
 
 .checkbox-icon:focus {
   border: 2px solid var(--color-iris);
@@ -1102,10 +1162,7 @@ input[type="checkbox"]:checked + .checkbox-icon > .icon-checkbox-checked {
 }
 
 /* Subscribe */
-.subscribe-footer {
-  display: flex;
-  gap: 24px;
-}
+
 .subscribe-title {
   font-weight: 500;
   font-size: 16px;
@@ -1121,22 +1178,24 @@ input[type="checkbox"]:checked + .checkbox-icon > .icon-checkbox-checked {
   }
 }
 .subscribe-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 @media screen and (min-width: 768px) {
   .subscribe-form {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 24px;
   }
 }
 .subscribe-email {
   width: 100%;
   height: 40px;
   padding-left: 16px;
-  margin-bottom: 16px;
   border: 1px solid var(--color-white);
   color: var(--color-white);
-
   display: flex;
   border-radius: 4px;
   background-color: transparent;
@@ -1144,9 +1203,19 @@ input[type="checkbox"]:checked + .checkbox-icon > .icon-checkbox-checked {
   outline-offset: -2px;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-@media screen and (min-width: 1158px) {
+@media screen and (max-width: 1157px) {
   .subscribe-email {
-    min-width: 264px;
+    opacity: 0.3;
+  }
+}
+@media screen and (max-width: 767px) {
+  .subscribe-email {
+    margin-bottom: 16px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .subscribe-email {
+    width: 264px;
   }
 }
 .subscribe-email::placeholder {
