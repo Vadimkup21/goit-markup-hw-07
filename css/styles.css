@@ -386,17 +386,15 @@ img {
   color: var(--color-navy-blue);
   margin-bottom: 72px;
 }
-@media screen and (max-width: 1157px) {
-  .team-title {
-    padding-top: 96px;
-  }
-}
+
 .team {
   background-color: var(--color-cloud);
   color: var(--color-grey);
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
+  padding-bottom: 96px;
+  padding-top: 96px;
 }
 @media screen and (min-width: 1158px) {
   .team {
@@ -412,7 +410,7 @@ img {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding-bottom: 96px;
+
   row-gap: 72px;
 }
 @media screen and (min-width: 768px) {
@@ -549,7 +547,6 @@ img {
 }
 .info-text {
   text-align: left;
-  margin-bottom: 8px;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -858,8 +855,7 @@ img {
 
 .first-section {
   background-color: var(--color-grey);
-  padding: 188px 0;
-  height: 600px;
+  padding: 112px 0;
   max-width: 1440px;
   margin-right: auto;
   margin-left: auto;
@@ -877,7 +873,7 @@ img {
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url("/goit-markup-hw-07/images/gallery/Dark-bg_mob@1x.webp");
+      url("../images/gallery/Dark-bg_mob@1x.webp");
   }
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
@@ -887,7 +883,7 @@ img {
           rgba(46, 47, 66, 0.7),
           rgba(46, 47, 66, 0.7)
         ),
-        url(/goit-markup-hw-07/images/gallery/Dark-bg_mob@2x.webp);
+        url("../images/gallery/Dark-bg_mob@2x.webp");
     }
   }
 }
@@ -898,7 +894,7 @@ img {
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url(/goit-markup-hw-07/images/gallery/Dark-bg_tab@1x.webp);
+      url("../images/gallery/Dark-bg_tab@1x.webp");
   }
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
@@ -908,17 +904,18 @@ img {
           rgba(46, 47, 66, 0.7),
           rgba(46, 47, 66, 0.7)
         ),
-        url(/goit-markup-hw-07/images/gallery/Dark-bg_tab@2x.webp);
+        url("../images/gallery/Dark-bg_tab@2x.webp");
     }
   }
 }
-@media screen and (min-width: 769px) and (max-width: 1200px) {
+@media screen and (min-width: 769px) {
   .first-section {
+    padding: 188px 0;
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url(/goit-markup-hw-07/images/gallery/people-office\ 1_desktop@1x.webp);
+      url("../images/gallery/people-office 1_desktop@1x.webp");
   }
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
@@ -928,7 +925,7 @@ img {
           rgba(46, 47, 66, 0.7),
           rgba(46, 47, 66, 0.7)
         ),
-        url(/goit-markup-hw-07/images/gallery/people-office\ 1_desktop@2x.webp);
+        url("../images/gallery/people-office 1_desktop@2x.webp");
     }
   }
 }
@@ -965,13 +962,24 @@ img {
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 72px 24px 24px 24px;
-  width: 408px;
+  width: 392px;
   height: 584px;
 
   background-color: #fcfcfc;
   border-radius: 4px;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+@media screen and (max-width: 427px) {
+  .modal {
+    width: 90%;
+    overflow-y: scroll;
+  }
+}
+@media screen and (min-width: 768px) {
+  .modal {
+    width: 408px;
+  }
 }
 .backdrop {
   position: fixed;
@@ -1371,6 +1379,11 @@ input[type="checkbox"]:checked + .checkbox-icon > .icon-checkbox-checked {
   letter-spacing: 0.02em;
   color: var(--color-iris);
 }
+@media screen and (max-width: 320px) {
+  .mobile-contact-item {
+    font-size: 25px;
+  }
+}
 .mobile-contact-list-item:not(:last-child) {
   margin-bottom: 40px;
 }
@@ -1384,4 +1397,9 @@ input[type="checkbox"]:checked + .checkbox-icon > .icon-checkbox-checked {
 .mobile-networks-list {
   display: flex;
   gap: 56px;
+}
+@media screen and (max-width: 427px) {
+  .mobile-networks-list {
+    gap: 24px;
+  }
 }
