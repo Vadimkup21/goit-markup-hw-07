@@ -390,7 +390,6 @@ img {
 .team {
   background-color: var(--color-cloud);
   color: var(--color-grey);
-  max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 96px;
@@ -910,7 +909,6 @@ img {
 }
 @media screen and (min-width: 769px) {
   .first-section {
-    padding: 188px 0;
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
@@ -927,6 +925,11 @@ img {
         ),
         url("../images/gallery/people-office 1_desktop@2x.webp");
     }
+  }
+}
+@media screen and (min-width: 1158px) {
+  .first-section {
+    padding: 188px 0;
   }
 }
 /* Overlay */
@@ -1131,10 +1134,15 @@ img {
 
 .checkbox-text {
   margin-left: 8px;
-  font-size: 12px;
+  font-size: 8px;
   line-height: 1.16;
   letter-spacing: 0.04em;
   color: var(--color-text-form);
+}
+@media screen and (min-width: 428px) {
+  .checkbox-text {
+    font-size: 12px;
+  }
 }
 
 /* .checkbox-icon {
